@@ -1,0 +1,11 @@
+
+services:
+  website:
+    build: .
+    image: it-services-img
+    container_name: it-services-website
+    ports:
+      - "80:5000"
+    restart: always
+    volumes:
+      - ./database:/app/database
